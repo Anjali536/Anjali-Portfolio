@@ -162,7 +162,7 @@ function App() {
                   and optimized for all devices.
                 </p>
                 <a
-                  href="https://github.com/Anjali536/Portfolio.git"
+                  href="https://github.com/Anjali536/Anjali-Portfolio.git"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="github-link"
