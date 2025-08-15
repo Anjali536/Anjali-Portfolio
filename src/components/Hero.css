@@ -1,0 +1,398 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: rgb(10, 9, 32);
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  color: white;
+}
+
+.stars {
+  pointer-events: none; /* so it doesn’t block mouse or scroll */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+  animation: moveStars 50s linear infinite;
+  z-index: -1; /* stays behind text */
+}
+
+@keyframes moveStars {
+  from { background-position: 0 0; }
+  to { background-position: 10000px 5000px; }
+}
+
+.header {
+  padding: 15px 0;
+  position: static;
+  top: 0;
+  z-index: 100;
+  height: 60px;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  font-size: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background: linear-gradient(to right, #7f008b, #0080ff); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* for non-webkit browsers */
+}
+
+.nav li {
+  margin: 0 20px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.nav a:hover {
+  color: rgb(65, 10, 132);
+}
+
+section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.about-section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.about-section h2 {
+  font-size: 3em;
+  margin-bottom: 30px;
+  background: linear-gradient(to right, #7f008b, #0080ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.about-section p {
+  font-size: 30px;
+  max-width: 800px;
+  margin: 0 auto 50px;
+  line-height: 1.8em;
+}
+/* ABOUT GRID */
+.About-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.Technology-container{
+  background-color: rgba(255, 255, 255, 0.05); 
+  padding: 20px;
+  border-radius: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.Technology-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px #00ffff;
+}
+
+/* Tech List Container */
+.tech-list-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 85px;
+  margin-top: 15px;
+  padding: 30px;
+}
+
+/* Each Technology Card */
+.tech-element {
+  border-radius: 20px;
+  font-size: 5px;
+  padding: 15px;
+  min-width: 125px;  /* wider */
+  min-height: 80px;  /* taller */
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tech-element:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px #00ffff;
+}
+.project-section h2{
+  font-size: 3em;
+  margin-bottom: 30px;
+  background: linear-gradient(to right, #7f008b, #0080ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.project-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  max-width: 1300px;
+  margin: 40px auto;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+.project-video {
+  width: 100%;
+  height: 340px;
+  border-radius: 20px;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-video2 {
+  width: 100%;
+  max-width: 800px; /* keeps it from getting too wide on big screens */
+  height: 450px; /* bigger height */
+  border-radius: 20px;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: block;
+  margin: 0 auto; /* centers the video */
+}
+
+.project-video2:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 18px cyan;
+}
+
+
+.project-video:hover {
+  min-height: 30px;
+  min-width: 80px;
+  transform: scale(1.05);
+  box-shadow: 2px 2px 20px cyan;
+}
+
+.project-content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.project-content h3 {
+  font-size: 2rem;
+  font-style: oblique;
+  color: cyan;
+}
+
+.project-content p {
+  font-size: 1.5rem;
+  color: #ddd;
+  line-height: 1.5;
+}
+
+/* GitHub link button */
+.github-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: cyan;
+  color: black;
+  padding: 8px 15px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  width: fit-content;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.github-link:hover {
+  background: #00a3a3;
+  color: white;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .project-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .project-video {
+    height: 220px;
+  }
+}
+
+.project-image{
+  min-height: 50px;
+  height: 340px;
+  border-radius: 20px;
+}
+.contact-container {
+  background-color: rgb(2, 2, 40);
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: 50px;
+  width: 100%;
+}
+.contact-section h2 {
+  font-size: 3em;
+  margin-bottom: 30px;
+  background: linear-gradient(to right, #7f008b, #0080ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.contact-container p {
+  margin: 5px 0 20px;
+  font-size: 20px;
+  color: #ccc;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 20px;
+}
+
+.social-icons a {
+  color: cyan;
+  text-decoration: none;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.social-icons a:hover {
+  color: white;
+  transform: scale(1.2);
+}
+
+.footer-note {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #666;
+}
+.contact-intro {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: cyan;
+}
+
+.contact-middle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.contact-left, .contact-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.contact-right {
+  flex-direction: column;
+  align-items: flex-end;
+}
+.contact-right p, .contact-left p, .contact-container p {
+  size: 30px;
+  font-size: 25px;
+}
+.social-icon {
+  font-size: 2.2rem;
+  color: cyan;
+  vertical-align: middle;
+}
+
+.name {
+  font-weight: bold;
+  color: white;
+}
+
+.college {
+  font-size: 0.85rem;
+  color: #bbb;
+}
+
+.contact-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.hero-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.text-style{
+   background: linear-gradient(to right, #7f008b, #0080ff); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* for non-webkit browsers */
+    
+}
+
+.hero-title {
+  background: linear-gradient(to right, #7f008b, #0080ff); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* for non-webkit browsers */
+  font-weight: bold;
+}
+
+.profile-container {
+  display: flex;
+  justify-content: center; /* center horizontally */
+  margin-top: 10px;
+}
+
+.profile-pic {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid cyan;
+  box-shadow: 0 0 15px rgb(187, 0, 255);
+}
+
+.hero-container {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  font-size: 30px;
+}
+
+.box-container {
+  padding: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;  /*White text */
+}
+.text-container {
+  size: 50px;
+  font-size: 50px;
+}
